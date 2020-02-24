@@ -1,0 +1,13 @@
+.imaageView{
+	-fx-border-color: green;
+}
+
+.label{
+	-fx-text-alignment: center;
+	-fx-text-decoration: underline;}
+
+.button{
+	-fx-border-color: #97a544;
+	-fx-border-width: 0.7em;
+	-fx-color:white;
+}

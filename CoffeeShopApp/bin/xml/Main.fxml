@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="682.0" prefWidth="1230.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <TabPane prefHeight="682.0" prefWidth="1230.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="this.coffee() Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="661.0" prefWidth="966.0">
+                     <children>
+                        <ImageView fitHeight="180.0" fitWidth="496.0" layoutX="534.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/bg_title.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="203.0" fitWidth="944.0" layoutX="348.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+                           <image>
+                              <Image url="@../images/bg_coffee.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="141.0" fitWidth="931.0" layoutX="353.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/bg_tea.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="135.0" fitWidth="935.0" layoutX="354.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/bg_soda.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="172.0" fitWidth="928.0" layoutX="350.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/bg_blended.png" />
+                           </image>
+                        </ImageView>
+                        <Button id="coffeeSmall" fx:id="smallCoffee" layoutX="1053.0" layoutY="127.0" mnemonicParsing="false" onAction="#smallCoffeeClick" prefHeight="40.0" prefWidth="161.0" text="SMALL .90" />
+                        <Button id="coffeeMedium" fx:id="mediumCoffee" layoutX="1053.0" layoutY="170.0" mnemonicParsing="false" onAction="#mediumCoffeeClick" prefHeight="40.0" prefWidth="161.0" text="MEDIUM 1.60" />
+                        <Button id="coffeeLarge" fx:id="largeCoffee" layoutX="1053.0" layoutY="214.0" mnemonicParsing="false" onAction="#largeCoffeeClick" prefHeight="40.0" prefWidth="161.0" text="LARGE 2.00" />
+                        <Button id="teaLarge" fx:id="largeTea" layoutX="1056.0" layoutY="344.0" mnemonicParsing="false" onAction="#largeTeaClick" prefHeight="40.0" prefWidth="161.0" text="LARGE 2.50" />
+                        <Button id="teaMedium" fx:id="mediumTea" layoutX="1056.0" layoutY="300.0" mnemonicParsing="false" onAction="#mediumTeaClick" prefHeight="40.0" prefWidth="161.0" text="MEDIUM 2.00" />
+                        <Button id="teaSmall" fx:id="smallTea" layoutX="1056.0" layoutY="257.0" mnemonicParsing="false" onAction="#smallTeaClick" prefHeight="40.0" prefWidth="161.0" text="SMALL 1.25" />
+                        <Button id="sodaLarge" fx:id="largeSoda" layoutX="1053.0" layoutY="475.0" mnemonicParsing="false" onAction="#largeSodaClick" prefHeight="40.0" prefWidth="161.0" text="LARGE 2.50" />
+                        <Button id="sodaMedium" fx:id="mediumSoda" layoutX="1053.0" layoutY="431.0" mnemonicParsing="false" onAction="#mediumSodaClick" prefHeight="40.0" prefWidth="161.0" text="MEDIUM 2.00" />
+                        <Button id="sodaSmall" fx:id="smallSoda" layoutX="1053.0" layoutY="388.0" mnemonicParsing="false" onAction="#smallSodaClick" prefHeight="40.0" prefWidth="161.0" text="SMALL 1.25" />
+                        <Button id="blendedLarge" fx:id="largeBlended" layoutX="1052.0" layoutY="613.0" mnemonicParsing="false" onAction="#largeBlendedClick" prefHeight="40.0" prefWidth="161.0" text="LARGE 3.50" />
+                        <Button id="blendedMedium" fx:id="mediumBlended" layoutX="1052.0" layoutY="569.0" mnemonicParsing="false" onAction="#mediumBlendedClick" prefHeight="40.0" prefWidth="161.0" text="MEDIUM 3.00" />
+                        <Button id="blendedSmall" fx:id="smallBlended" layoutX="1052.0" layoutY="526.0" mnemonicParsing="false" onAction="#smallBlendedClick" prefHeight="40.0" prefWidth="161.0" text="SMALL 2.50" />
+                        <Button fx:id="completeOrder" layoutX="54.0" layoutY="583.0" mnemonicParsing="false" onAction="#completeOrderClick" prefHeight="52.0" prefWidth="196.0" text="Complete Order" />
+                        <ListView fx:id="currentOrderList" layoutX="14.0" layoutY="57.0" prefHeight="473.0" prefWidth="315.0" />
+                        <Label layoutX="74.0" layoutY="14.0" prefHeight="38.0" prefWidth="210.0" text="Current Order" underline="true">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="539.0" prefHeight="44.0" prefWidth="156.0" text="Total:" underline="true">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#97a544" height="14.0" layoutX="345.0" layoutY="247.0" stroke="#97a544" strokeType="INSIDE" width="890.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#97a544" height="14.0" layoutX="346.0" layoutY="385.0" stroke="#97a544" strokeType="INSIDE" width="911.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#97a544" height="14.0" layoutX="347.0" layoutY="513.0" stroke="#97a544" strokeType="INSIDE" width="895.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#97a544" height="14.0" layoutX="345.0" layoutY="118.0" stroke="#97a544" strokeType="INSIDE" width="890.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#97a544" height="671.0" layoutX="345.0" layoutY="-10.0" stroke="#97a544" strokeType="INSIDE" width="10.0" />
+                        <Label fx:id="TotalCost" layoutX="152.0" layoutY="545.0" prefHeight="32.0" prefWidth="102.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Orders Added">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="newAdded" layoutX="17.0" layoutY="71.0" prefHeight="530.0" prefWidth="570.0" />
+                        <Label layoutX="76.0" layoutY="18.0" text="New Orders Added">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
